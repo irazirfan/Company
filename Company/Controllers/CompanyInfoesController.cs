@@ -79,8 +79,8 @@ namespace Company.Controllers
                 File = new FileDescription(@"C:\Users\Iraz\Downloads\Pics\" +logoPath)
             };
             var uploadResult = cloudinary.Upload(uploadParams);
-            string imageUrl = uploadResult.SecureUri.AbsoluteUri.ToString();
-            return imageUrl;
+
+            return uploadResult.SecureUri.AbsoluteUri;
         }
 
         // GET: CompanyInfoes/Edit/5
