@@ -15,7 +15,7 @@
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
-    <table class="table">
+    <table class="table table-responsive">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -50,13 +50,13 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LogoPath)
+                <img src="@item.LogoPath" style="width:50%;height:50%;"/>
             </td>
-            <td>
+            @*<td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id=item.Id }) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-            </td>
+            </td>*@
         </tr>
     }
     

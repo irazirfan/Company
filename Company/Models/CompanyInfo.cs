@@ -21,7 +21,7 @@ namespace Company.Models
         public string Phone { get; set; }
         public string Address { get; set; }
         [DataType(DataType.Upload)]
-        [Display(Name = "Upload Logo")]
+        [Display(Name = "Logo")]
         [Required(ErrorMessage = "Please choose file to upload.")]
         public string LogoPath { get; set; }
     }
