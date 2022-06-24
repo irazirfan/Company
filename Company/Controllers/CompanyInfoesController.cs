@@ -64,6 +64,7 @@ namespace Company.Controllers
             return View(companyInfo);
         }
 
+        [Obsolete]
         private string SaveToCloudinary(string logoPath)
         {
             Account account = new Account(
@@ -75,10 +76,11 @@ namespace Company.Controllers
 
             var uploadParams = new ImageUploadParams()
             {
-                File = new FileDescription(logoPath)
+                File = new FileDescription(@"C:\Users\Iraz\Downloads\Pics\" +logoPath)
             };
             var uploadResult = cloudinary.Upload(uploadParams);
-            return uploadResult.ToString();
+            string imageUrl = uploadResult.SecureUri.AbsoluteUri.ToString();
+            return imageUrl;
         }
 
         // GET: CompanyInfoes/Edit/5
