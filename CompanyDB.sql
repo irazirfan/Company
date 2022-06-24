@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [CompanyDB]    Script Date: 6/24/2022 5:16:55 PM ******/
+/****** Object:  Database [CompanyDB]    Script Date: 6/24/2022 6:02:45 PM ******/
 CREATE DATABASE [CompanyDB]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,7 +79,7 @@ ALTER DATABASE [CompanyDB] SET QUERY_STORE = OFF
 GO
 USE [CompanyDB]
 GO
-/****** Object:  Table [dbo].[CompanyInfo]    Script Date: 6/24/2022 5:16:55 PM ******/
+/****** Object:  Table [dbo].[CompanyInfo]    Script Date: 6/24/2022 6:02:46 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,6 +96,14 @@ CREATE TABLE [dbo].[CompanyInfo](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[CompanyInfo] ON 
+GO
+INSERT [dbo].[CompanyInfo] ([Id], [Name], [Email], [Phone], [Address], [LogoPath]) VALUES (3, N'Bkash Limited', N'info@bkash.com', N'+8802441139', N'Nikunja-2, Dhaka', N'https://res.cloudinary.com/ione/image/upload/v1656070863/qpgmcw9uo3qwloerbr00.png')
+GO
+INSERT [dbo].[CompanyInfo] ([Id], [Name], [Email], [Phone], [Address], [LogoPath]) VALUES (4, N'Nagad', N'support@nagad.com', N'+8801679332699', N'Banani, Dhaka', N'https://res.cloudinary.com/ione/image/upload/v1656071957/k1vqgsrdhiixvex6mnhu.png')
+GO
+SET IDENTITY_INSERT [dbo].[CompanyInfo] OFF
 GO
 USE [master]
 GO
